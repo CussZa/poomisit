@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: monospace;
+    list-style: none;
+    /* border: 1px solid aliceblue; */
+}
+
+body {
+    background-color: #393646;
+    max-width: 1920px;
+    margin: 0 auto;
+
+}
+
+.bgcolor {
+    background-color: #2A2438;
+}
+
+/* header */
+
+header {
+    overflow: hidden;
+}
+
+.banner {
+    margin: auto;
+    padding: 0;
+    min-width: fit-content;
+    min-height: fit-content;
+}
+
+.banner img {
+    display: block;
+    margin: auto;
+
+    width: 1200px;
+
+}
+
+nav {
+    background-color: #352F44;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+label.logotxt {
+    font-size: 35px;
+    line-height: 80px;
+    margin-left: 10%;
+    font-weight: bold;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+label.logoimg {
+    line-height: 80px;
+    margin: 0px 10%;
+    cursor: pointer;
+}
+
+nav ul {
+    float: right;
+    margin-right: 10%;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    font-size: 20px;
+    color: aliceblue;
+    padding: 10px 13px;
+    border: 2px solid aliceblue;
+    border-radius: 5px;
+    background-color: #2A2438;
+}
+
+a.active,nav a:hover {
+    transition: 0.2s ease 0s;
+    background-color: aliceblue;
+    color: #2A2438;
+    font-weight: bolder;
+}
+
+a.about {
+    color: #2A2438;
+    border: 2px solid aliceblue;
+    background-color:aliceblue;
+    font-weight: bolder;
+    margin-left: 40px;
+}
+
+/* main */
+
+main {
+    margin: 30px 3%;
+    color: aliceblue;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 4fr 1px 1fr;
+    grid-template-areas: 
+    "context divider sidebar";
+    gap: 3%;
+}
+
+.aside-title {
+    font-size: 25px;
+    font-weight: bolder;
+    
+}
+
+div.aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.divider {
+    width: 1px;
+    border: 2px solid aliceblue;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.context {
+    font-size: 20px;
+    margin: 0 50px;
+    font-weight: bolder;
+}
+
+aside {
+    padding-top: 50px;
+    grid-area: sidebar;
+    display: grid;
+    grid-template-rows: 50px;
+    justify-content: center;
+    background-color: #352F44;
+}
+
+section {
+    padding: 25px 0;
+    grid-area: context;
+    display: grid;
+    grid-template-rows: 50px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nax {
+    margin: 50px auto;
+    max-height: fit-content;
+}
+
+.nax img {
+    padding-block: 50px;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+/* footer */
+
+footer {
+    background-color: #352F44;
+    display: block;
+    clear: both;
+    text-align: center;
+    height: 200px;
+}
+
+/* responsive not done yet*/
+@media screen and (max-width: 600px) {
+
+    .banner img {
+        height: auto; /* Adjust banner height for mobile */
+    }
+
+    nav {
+        height: auto; /* Adjust navbar height for mobile */
+        padding: 20px; /* Adjust padding */
+    }
+    
+    nav ul {
+        float: none; /* Remove float */
+        margin-right: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline-block; /* Stack list items vertically */
+        margin: 0px 0;
+        line-height: auto;
+    }
+
+    nav ul li a {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+
+    .context {
+        font-size: 8px; /* Adjust font size */
+    }
+
+    aside {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .aside {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px; /* Adjust font size */
+        padding: auto;
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+
+    .section {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    a.about {
+        display: inline;
+        margin: 0;
+    }
+
+    label.logotxt {
+        display: block;
+        margin: auto;
+        text-align: center;
+        border-bottom: 2px solid aliceblue;
+    }
+
+    .nax img {
+        display: block;
+        padding: 25px 0;
+    }
+
+    main {
+        margin-inline: 3% ;
+        margin-top: 5%;
+        padding-top: 30px; /* Adjust padding */
+        display: block;
+    }
+
+    .divider {
+        display: none; /* Hide divider */
+    }
+
+    .nax img {
+        width: 50%; /* Make images responsive */
+    }
+}
